@@ -1,13 +1,14 @@
 package com.dcpa.ouvidoria;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.activity_main, menu);
+        ListView listview = (ListView) findViewById(R.id.lista);
         return true;
     }
 
@@ -85,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
                     });
 
             queue.add(jsObjRequest);
+
+
 
         }
         return super.onOptionsItemSelected(item);
